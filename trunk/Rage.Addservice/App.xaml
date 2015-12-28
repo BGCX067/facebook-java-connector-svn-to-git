@@ -1,0 +1,10 @@
+﻿<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+             xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" 
+             x:Class="Rage.Addservice.App"
+             xmlns:Converters="clr-namespace:Rage.Addservice.Converters;assembly=Rage.Addservice"
+             >
+    <Application.Resources>
+        <Converters:BooleanToVisibilityConverter x:Key="booleanVisibilityConverter" />
+    </Application.Resources>
+</Application>

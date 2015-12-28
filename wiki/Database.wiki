@@ -1,0 +1,8 @@
+Database created.
+IP address: 89.73.117.184
+database name: XE
+user/schema: facebook
+password: facebook
+
+Temporary table is created with one record, to check:
+SELECT * FROM test;

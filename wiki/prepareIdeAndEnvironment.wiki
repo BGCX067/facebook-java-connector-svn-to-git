@@ -1,0 +1,27 @@
+#summary One-sentence summary of this page.
+
+= Prepare IDE and environment for work =
+
+Short how-to about preparing IDE to work with our project.
+
+= Download IDE and plugins =
+
+Download newest version of eclipse for Java EE Developers from official site http://www.eclipse.org/downloads/. 
+
+Install Google Plugin for Eclipse from software site:
+http://dl.google.com/eclipse/plugin/3.7
+
+Install Subversion plugin for eclipse (Subclipse) as described in official manual http://subclipse.tigris.org/servlets/ProjectProcess?pageID=p4wYuA.
+Note: remember if you're using linux to install JavaHL package from repository!
+
+= Download GWT FB Code for review =
+
+Before we start coding it's good to know what are we dealing with. The best thing to do is to make a quick review of GWT FB code which is available on CodeGoogle or download its source and import to eclipse. 
+
+GWT FB source is available on Github: https://github.com/olams/GwtFB
+
+Note that GWT FB source will no work out of the box. You need to create new Webapp project and then pase code into project home directory!
+
+= New to GWT? =
+
+If your'e new to GWT the easiest way to start it's to complete SockWatcher Tutorial. You can find it here: http://code.google.com/intl/pl/webtoolkit/doc/1.6/tutorial/gettingstarted.html

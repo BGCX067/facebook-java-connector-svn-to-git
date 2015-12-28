@@ -1,0 +1,1 @@
+Przeklej plik facebook_acces_token.txt by by³ dostêpny pod sciezka D:\facebook_acces_token.txt Jesli token wygasl to wygeneruj nowy uzywajac usera falvickdeveloper na https://developers.facebook.com/tools/access_token

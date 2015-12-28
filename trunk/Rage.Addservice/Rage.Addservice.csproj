@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F7660F2D-BC23-46DA-A7FA-B329608EC247}</ProjectGuid>
+    <ProjectTypeGuids>{A1591282-1198-4647-A2B1-27E5FF5F6F3B};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rage.Addservice</RootNamespace>
+    <AssemblyName>Rage.Addservice</AssemblyName>
+    <TargetFrameworkIdentifier>Silverlight</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <SilverlightVersion>$(TargetFrameworkVersion)</SilverlightVersion>
+    <SilverlightApplication>true</SilverlightApplication>
+    <SupportedCultures>
+    </SupportedCultures>
+    <XapOutputs>true</XapOutputs>
+    <GenerateSilverlightManifest>true</GenerateSilverlightManifest>
+    <XapFilename>Rage.Addservice.xap</XapFilename>
+    <SilverlightManifestTemplate>Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <SilverlightAppEntry>Rage.Addservice.App</SilverlightAppEntry>
+    <TestPageFileName>Rage.AddserviceTestPage.html</TestPageFileName>
+    <CreateTestPage>true</CreateTestPage>
+    <ValidateXaml>true</ValidateXaml>
+    <EnableOutOfBrowser>false</EnableOutOfBrowser>
+    <OutOfBrowserSettingsFile>Properties\OutOfBrowserSettings.xml</OutOfBrowserSettingsFile>
+    <UsePlatformExtensions>false</UsePlatformExtensions>
+    <ThrowErrorsInValidation>true</ThrowErrorsInValidation>
+    <LinkedServerProject>
+    </LinkedServerProject>
+    <ExpressionBlendVersion>4.1.20321.0</ExpressionBlendVersion>
+    <Utf8Output>true</Utf8Output>
+    <InBrowserSettingsFile>Properties\InBrowserSettings.xml</InBrowserSettingsFile>
+    <RequireInBrowserElevation>true</RequireInBrowserElevation>
+  </PropertyGroup>
+  <!-- This property group is only here to support building this project using the 
+       MSBuild 3.5 toolset. In order to work correctly with this older toolset, it needs 
+       to set the TargetFrameworkVersion to v3.5 -->
+  <PropertyGroup Condition="'$(MSBuildToolsVersion)' == '3.5'">
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release</OutputPath>
+    <DefineConstants>TRACE;SILVERLIGHT</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.Prism">
+      <HintPath>..\lib\Microsoft.Practices.Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity">
+      <HintPath>..\lib\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.UnityExtensions">
+      <HintPath>..\lib\Microsoft.Practices.Prism.UnityExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation">
+      <HintPath>..\lib\Microsoft.Practices.ServiceLocation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Silverlight">
+      <HintPath>..\lib\Microsoft.Practices.Unity.Silverlight.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.DomainServices.Client, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows" />
+    <Reference Include="system" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Windows.Controls" />
+    <Reference Include="System.Windows.Controls.Data" />
+    <Reference Include="System.Windows.Controls.Data.Input" />
+    <Reference Include="System.Windows.Controls.DomainServices, Version=2.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Windows.Controls.Input.Toolkit">
+      <HintPath>..\lib\System.Windows.Controls.Input.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Controls.Toolkit, Version=5.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Browser" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AppTabControl.xaml.cs">
+      <DependentUpon>AppTabControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
+    <Compile Include="Helpers\BitmapImageExtension.cs" />
+    <Compile Include="Infrastructure\Bootstrapper.cs" />
+    <Compile Include="Infrastructure\IPopup.cs" />
+    <Compile Include="Infrastructure\IUserManager.cs" />
+    <Compile Include="Infrastructure\IViewConductor.cs" />
+    <Compile Include="Infrastructure\IViewLocator.cs" />
+    <Compile Include="Infrastructure\ObservableDelegateCommand.cs" />
+    <Compile Include="Infrastructure\UserManager.cs" />
+    <Compile Include="Infrastructure\ViewConductor.cs" />
+    <Compile Include="Infrastructure\ViewLocator.cs" />
+    <Compile Include="Infrastructure\ViewNames.cs" />
+    <Compile Include="MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\RemoteService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service\IPersistenceService.cs" />
+    <Compile Include="Service\RemotePersistenceService.cs" />
+    <Compile Include="Service\ServiceCallState.cs" />
+    <Compile Include="Utill\IObservable.cs" />
+    <Compile Include="Utill\Observable.cs" />
+    <Compile Include="Utill\ObservableBase.cs" />
+    <Compile Include="ViewModel\AdvertsContainerViewModel.cs" />
+    <Compile Include="ViewModel\AdvertViewModel.cs" />
+    <Compile Include="ViewModel\Base\ViewModelBase.cs" />
+    <Compile Include="ViewModel\ShellViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
+    <Compile Include="ViewModel\WallViewModel.cs" />
+    <Compile Include="Views\AdvertDetailsPopup.xaml.cs">
+      <DependentUpon>AdvertDetailsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\LoginPopup.xaml.cs">
+      <DependentUpon>LoginPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewAdvertPopup.xaml.cs">
+      <DependentUpon>NewAdvertPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RegisterUserPopup.xaml.cs">
+      <DependentUpon>RegisterUserPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WallDetailsPopup.xaml.cs">
+      <DependentUpon>WallDetailsPopup.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </ApplicationDefinition>
+    <Page Include="Controls\AppTabControl.xaml">
+      <Generator>MSBuild:MarkupCompilePass1</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AdvertDetailsPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\LoginPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\NewAdvertPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RegisterUserPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\WallDetailsPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AppManifest.xml" />
+    <None Include="Properties\DataSources\Rage.Addservice.Domain.Model.Advert.datasource" />
+    <None Include="Properties\DataSources\Rage.Addservice.Domain.Model.AdvertStatus.datasource" />
+    <None Include="Properties\DataSources\Rage.Addservice.Domain.Model.User.datasource" />
+    <None Include="Properties\DataSources\Rage.Addservice.Domain.Model.Wall.datasource" />
+    <Resource Include="Icons\_0000_DVD.png" />
+    <Resource Include="Icons\_0001_BluRay.png" />
+    <Resource Include="Icons\_0002_CD.png" />
+    <Resource Include="Icons\_0003_Home.png" />
+    <Resource Include="Icons\_0004_Globe.png" />
+    <Resource Include="Icons\_0005_Delete.png" />
+    <Resource Include="Icons\_0006_Cross.png" />
+    <Resource Include="Icons\_0007_Tick.png" />
+    <Resource Include="Icons\_0008_Minus.png" />
+    <Resource Include="Icons\_0009_Add.png" />
+    <Resource Include="Icons\_0010_Alert.png" />
+    <Resource Include="Icons\_0011_Info.png" />
+    <Resource Include="Icons\_0012_Books.png" />
+    <Resource Include="Icons\_0013_Printer.png" />
+    <Resource Include="Icons\_0014_Pin.png" />
+    <Resource Include="Icons\_0015_Padlock.png" />
+    <Resource Include="Icons\_0016_Ruler.png" />
+    <Resource Include="Icons\_0017_Pencil-and-Ruler.png" />
+    <Resource Include="Icons\_0018_Pencil.png" />
+    <Resource Include="Icons\_0019_Preferences.png" />
+    <Resource Include="Icons\_0020_Magic-Wand.png" />
+    <Resource Include="Icons\_0021_Hat.png" />
+    <Resource Include="Icons\_0022_Hat-and-Magic-Wand.png" />
+    <Resource Include="Icons\_0023_Academic-Hat.png" />
+    <Resource Include="Icons\_0024_Bookmark.png" />
+    <Resource Include="Icons\_0025_Ticket.png" />
+    <Resource Include="Icons\_0026_Photos.png" />
+    <Resource Include="Icons\_0027_Key.png" />
+    <Resource Include="Icons\_0028_Tag.png" />
+    <Resource Include="Icons\_0029_Guitar.png" />
+    <Resource Include="Icons\_0030_Search.png" />
+    <Resource Include="Icons\_0031_Tools.png" />
+    <Resource Include="Icons\_0032_Screw-Driver.png" />
+    <Resource Include="Icons\_0033_Spanner.png" />
+    <Resource Include="Icons\_0034_Mic.png" />
+    <Resource Include="Icons\_0035_Flashlight.png" />
+    <Resource Include="Icons\_0036_Mail.png" />
+    <Resource Include="Icons\_0037_Notepad.png" />
+    <Resource Include="Icons\_0038_Calender.png" />
+    <Resource Include="Icons\_0039_Medal-Bronze.png" />
+    <Resource Include="Icons\_0040_Medal-Silver.png" />
+    <Resource Include="Icons\_0041_Medal-Gold.png" />
+    <Resource Include="Icons\_0042_Gift.png" />
+    <Resource Include="Icons\_0043_Safe.png" />
+    <Resource Include="Icons\_0044_Carton.png" />
+    <Resource Include="Icons\_0045_Map.png" />
+    <Resource Include="Icons\_0046_User.png" />
+    <Resource Include="Icons\_0047_ID.png" />
+    <Resource Include="Icons\_0048_Camera.png" />
+    <Resource Include="Icons\_0049_Trash.png" />
+    <Resource Include="Resource\comment.jpg" />
+    <Resource Include="Resource\like.png" />
+    <None Include="Properties\InBrowserSettings.xml" />
+    <None Include="Service References\RemoteService\PersistenceService.disco" />
+    <Resource Include="Resource\twitter.png" />
+    <Resource Include="Resource\facebook.png" />
+    <Content Include="ServiceReferences.ClientConfig">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\RemoteService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\RemoteService\PersistenceService.wsdl" />
+    <None Include="Service References\RemoteService\PersistenceService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RemoteService\PersistenceService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RemoteService\PersistenceService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\RemoteService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rage.Addservice.Domain.Silverlight\Rage.Addservice.Domain.Silverlight.csproj">
+      <Project>{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}</Project>
+      <Name>Rage.Addservice.Domain.Silverlight</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Silverlight\$(SilverlightVersion)\Microsoft.Silverlight.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{A1591282-1198-4647-A2B1-27E5FF5F6F3B}">
+        <SilverlightProjectProperties />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

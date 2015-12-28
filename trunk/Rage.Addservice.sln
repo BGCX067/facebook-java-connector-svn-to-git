@@ -1,0 +1,81 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rage.Addservice", "Rage.Addservice\Rage.Addservice.csproj", "{F7660F2D-BC23-46DA-A7FA-B329608EC247}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37} = {BE52B3C6-A745-4BFB-B394-1371B3C6BE37}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rage.Addservice.Host", "Rage.Addservice.Host\Rage.Addservice.Host.csproj", "{BE52B3C6-A745-4BFB-B394-1371B3C6BE37}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{1C5210DF-5D0C-477D-8C23-9D73010BE6FF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Server", "Server", "{BBAC83E1-829C-48D6-962F-A2F3195F2601}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rage.Addservice.Domain", "RageAddservice.Domain\Rage.Addservice.Domain.csproj", "{3CDA8541-0A15-4E13-A903-48C2128F7B50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rage.Addservice.Domain.Silverlight", "Rage.Addservice.Domain.Silverlight\Rage.Addservice.Domain.Silverlight.csproj", "{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rage.Addservice.Persistence", "Rage.Addservice.Persistence\Rage.Addservice.Persistence.csproj", "{00C1EB6F-916B-45F6-9998-E1CD06EF40D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{AB5C4997-B57E-428B-A298-FA08FE5FF51F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerstitanceServiceTest", "UnitTests\PerstitanceServiceTest.csproj", "{093905D4-C995-4D26-9F95-601C5739C8D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37} = {BE52B3C6-A745-4BFB-B394-1371B3C6BE37}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8B4BE78E-0D6B-4E73-8E80-914BDCCC3ADB}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		Rage.Addservice.vsmdi = Rage.Addservice.vsmdi
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Rage.Addservice.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7660F2D-BC23-46DA-A7FA-B329608EC247}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7660F2D-BC23-46DA-A7FA-B329608EC247}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7660F2D-BC23-46DA-A7FA-B329608EC247}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7660F2D-BC23-46DA-A7FA-B329608EC247}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CDA8541-0A15-4E13-A903-48C2128F7B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CDA8541-0A15-4E13-A903-48C2128F7B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CDA8541-0A15-4E13-A903-48C2128F7B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CDA8541-0A15-4E13-A903-48C2128F7B50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C1EB6F-916B-45F6-9998-E1CD06EF40D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C1EB6F-916B-45F6-9998-E1CD06EF40D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C1EB6F-916B-45F6-9998-E1CD06EF40D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C1EB6F-916B-45F6-9998-E1CD06EF40D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{093905D4-C995-4D26-9F95-601C5739C8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{093905D4-C995-4D26-9F95-601C5739C8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{093905D4-C995-4D26-9F95-601C5739C8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{093905D4-C995-4D26-9F95-601C5739C8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F7660F2D-BC23-46DA-A7FA-B329608EC247} = {1C5210DF-5D0C-477D-8C23-9D73010BE6FF}
+		{4A0EBF63-B167-4B9A-AE6B-4D88D3AEE721} = {1C5210DF-5D0C-477D-8C23-9D73010BE6FF}
+		{BE52B3C6-A745-4BFB-B394-1371B3C6BE37} = {BBAC83E1-829C-48D6-962F-A2F3195F2601}
+		{3CDA8541-0A15-4E13-A903-48C2128F7B50} = {BBAC83E1-829C-48D6-962F-A2F3195F2601}
+		{00C1EB6F-916B-45F6-9998-E1CD06EF40D4} = {BBAC83E1-829C-48D6-962F-A2F3195F2601}
+		{093905D4-C995-4D26-9F95-601C5739C8D0} = {AB5C4997-B57E-428B-A298-FA08FE5FF51F}
+		{8B4BE78E-0D6B-4E73-8E80-914BDCCC3ADB} = {AB5C4997-B57E-428B-A298-FA08FE5FF51F}
+	EndGlobalSection
+EndGlobal

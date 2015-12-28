@@ -1,0 +1,16 @@
+﻿<UserControl
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sdk="http://schemas.microsoft.com/winfx/2006/xaml/presentation/sdk" x:Class="Rage.Addservice.MainPage"
+    xmlns:command="clr-namespace:Microsoft.Practices.Prism.Commands;assembly=Microsoft.Practices.Prism"
+    xmlns:controls="clr-namespace:Rage.Addservice.Controls"
+    mc:Ignorable="d"
+    d:DesignHeight="711" d:DesignWidth="371" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+
+    <Grid x:Name="LayoutRoot">
+        <controls:AppTabControl DataContext="{Binding MyAdverts.Value, Mode=TwoWay}"/>
+    </Grid>
+</UserControl>

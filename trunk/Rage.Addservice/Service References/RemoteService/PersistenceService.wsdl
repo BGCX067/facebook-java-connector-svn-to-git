@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PersistenceService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:6730/PersistenceService/PersistenceService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:6730/PersistenceService/PersistenceService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:6730/PersistenceService/PersistenceService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Rage.Addservice.Domain.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPersistenceService_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_IsLoggedIn_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedIn" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_IsLoggedIn_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsLoggedInResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdverts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdverts" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdverts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdvertsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdvert_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdvert" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdvert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdvertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_CreateAdvert_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdvert" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_CreateAdvert_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateAdvertResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdvertStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdvertStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetAdvertStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAdvertStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetWalls_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWalls" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetWalls_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWallsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetWall_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWall" />
+  </wsdl:message>
+  <wsdl:message name="IPersistenceService_GetWall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWallResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPersistenceService">
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetUsers" message="tns:IPersistenceService_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetUsersResponse" message="tns:IPersistenceService_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/Login" message="tns:IPersistenceService_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/LoginResponse" message="tns:IPersistenceService_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/CreateUser" message="tns:IPersistenceService_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/CreateUserResponse" message="tns:IPersistenceService_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/UpdateUser" message="tns:IPersistenceService_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/UpdateUserResponse" message="tns:IPersistenceService_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsLoggedIn">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/IsLoggedIn" message="tns:IPersistenceService_IsLoggedIn_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/IsLoggedInResponse" message="tns:IPersistenceService_IsLoggedIn_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdverts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetAdverts" message="tns:IPersistenceService_GetAdverts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetAdvertsResponse" message="tns:IPersistenceService_GetAdverts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetAdvert" message="tns:IPersistenceService_GetAdvert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetAdvertResponse" message="tns:IPersistenceService_GetAdvert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdvert">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/CreateAdvert" message="tns:IPersistenceService_CreateAdvert_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/CreateAdvertResponse" message="tns:IPersistenceService_CreateAdvert_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvertStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetAdvertStatus" message="tns:IPersistenceService_GetAdvertStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetAdvertStatusResponse" message="tns:IPersistenceService_GetAdvertStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWalls">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetWalls" message="tns:IPersistenceService_GetWalls_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetWallsResponse" message="tns:IPersistenceService_GetWalls_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWall">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPersistenceService/GetWall" message="tns:IPersistenceService_GetWall_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPersistenceService/GetWallResponse" message="tns:IPersistenceService_GetWall_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IPersistenceService" type="tns:IPersistenceService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsLoggedIn">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/IsLoggedIn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdverts">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetAdverts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvert">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetAdvert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAdvert">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/CreateAdvert" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAdvertStatus">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetAdvertStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWalls">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetWalls" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWall">
+      <soap:operation soapAction="http://tempuri.org/IPersistenceService/GetWall" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PersistenceService">
+    <wsdl:port name="BasicHttpBinding_IPersistenceService" binding="tns:BasicHttpBinding_IPersistenceService">
+      <soap:address location="http://localhost:6730/PersistenceService/PersistenceService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
